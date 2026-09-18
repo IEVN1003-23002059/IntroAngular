@@ -7,9 +7,10 @@ import { HeroesList } from './heroes/heroes-list/heroes-list';
 import { HeroesFilterPipe } from './heroes/heroes-filter-pipe';
 import { OperasBas } from './formulario/operas-bas/operas-bas';
 import { DistanciaComponent } from './formulario/distancia/distancia';
+import { Figuras } from './formulario/figuras/figuras';
 
 @NgModule({
-  declarations: [App, HeroesList, HeroesFilterPipe, OperasBas, DistanciaComponent],
+  declarations: [App, HeroesList, HeroesFilterPipe, OperasBas, DistanciaComponent, Figuras],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
