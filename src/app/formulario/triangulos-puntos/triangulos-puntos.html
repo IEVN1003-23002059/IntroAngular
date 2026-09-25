@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>Puntos del triángulo</h2>
+
+  <form (ngSubmit)="analizarPuntos()">
+    <div class="punto-group">
+      <h3>Punto A</h3>
+      <label>X: <input type="number" [(ngModel)]="x1" name="x1"></label>
+      <label>Y: <input type="number" [(ngModel)]="y1" name="y1"></label>
+    </div>
+
+    <div class="punto-group">
+      <h3>Punto B</h3>
+      <label>X: <input type="number" [(ngModel)]="x2" name="x2"></label>
+      <label>Y: <input type="number" [(ngModel)]="y2" name="y2"></label>
+    </div>
+
+    <div class="punto-group">
+      <h3>Punto C</h3>
+      <label>X: <input type="number" [(ngModel)]="x3" name="x3"></label>
+      <label>Y: <input type="number" [(ngModel)]="y3" name="y3"></label>
+    </div>
+
+    <button type="submit">Analizar puntos</button>
+  </form>
+
+  <div *ngIf="analizado" class="resultado">
+    <h3>RESULTADO</h3>
+    <p>Punto A: ({{ x1 }}, {{ y1 }})</p>
+    <p>Punto B: ({{ x2 }}, {{ y2 }})</p>
+    <p>Punto C: ({{ x3 }}, {{ y3 }})</p>
+
+    <div *ngIf="esTriangulo">
+      <p>✓ Los puntos forman un triángulo.</p>
+      <p><strong>Área:</strong> {{ area }} unidades cuadradas.</p>
+    </div>
+
+    <div *ngIf="!esTriangulo">
+      <p>Los tres puntos no forman un triángulo porque son colineales.</p>
+    </div>
+  </div>
+</div>

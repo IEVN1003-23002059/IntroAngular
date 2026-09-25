@@ -1,0 +1,15 @@
+<h3>INICIO DE SESIÓN</h3>
+
+<form (submit)="validarCredenciales()">
+  <div>
+    <label for="usuario">Usuario: </label>
+    <input type="text" id="usuario" [(ngModel)]="usuarioIngresado" name="usuario" />
+    
+    <label for="contrasena">Contraseña: </label>
+    <input type="password" id="contrasena" [(ngModel)]="contrasenaIngresada" name="contrasena" />
+    
+    <button type="button" (click)="validarCredenciales()">Iniciar sesión</button>
+  </div>
+</form>
+
+<p *ngIf="mensajeResultado">{{ mensajeResultado }}</p>

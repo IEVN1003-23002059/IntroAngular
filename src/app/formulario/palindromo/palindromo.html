@@ -1,0 +1,15 @@
+<div>
+  <h2>Analizador de Palindromos</h2>
+
+  <input type="text" [(ngModel)]="frase" placeholder="Escribe una frase..." />
+  <button (click)="analizar()">Analizar</button>
+
+  <div *ngIf="analizado">
+    <p>Numero de Vocales: <b>{{ numVocales }}</b></p>
+    <p>Numero de Consonantes: <b>{{ numConsonantes }}</b></p>
+    
+    <p>
+      <b>{{ esPalindromo ? 'Si es palindromo' : 'No es palindromo' }}</b>
+    </p>
+  </div>
+</div>
